@@ -13,22 +13,31 @@ A production-grade, full-stack web application developed for the Gridbricks take
 ## 📁 Project Structure
 
 ```text
-Gridbricks-wind-app/
+wind-energy-portal/
 ├── backend/
 │   ├── app/
 │   │   ├── __init__.py
-│   │   ├── main.py          # FastAPI application & API endpoints
-│   │   └── services.py      # Data processing & error metrics (MAE, RMSE, Bias)
-│   ├── Dockerfile
-│   └── requirements.txt
+│   │   ├── main.py                  # FastAPI app & API endpoints
+│   │   └── services.py              # Elexon data streaming & metric calculations (MAE, RMSE, Bias)
+│   ├── Dockerfile                   # Backend Docker configuration
+│   └── requirements.txt             # Python dependencies (FastAPI, uvicorn, pandas, numpy, etc.)
+│
 ├── frontend/
+│   ├── public/
 │   ├── src/
-│   │   ├── components/      # Modular UI components (Header, MetricCards, WindChart)
-│   │   ├── App.jsx
-│   │   └── index.css
-│   ├── package.json
-│   └── vite.config.js
-└── README.md
+│   │   ├── components/
+│   │   │   ├── Header.jsx           # App header & system status indicator
+│   │   │   ├── MetricCards.jsx      # UI cards for MAE, RMSE, and Forecast Bias
+│   │   │   └── WindChart.jsx        # Recharts interactive time-series chart
+│   │   ├── App.jsx                  # Main component, API fetching & state management
+│   │   ├── main.jsx                 # React entry point
+│   │   └── index.html               # HTML template
+    ├── package.json                 # Node dependencies (React, Vite, Tailwind, Recharts, Axios)
+    ├── postcss.config.js            # PostCSS configuration for processing Tailwind CSS
+    ├── tailwind.config.js           # Tailwind design system configuration
+    └── vite.config.js               # Vite build tool configuration
+│
+└── README.md                        # Documentation, local setup steps, and live deployment links
 ```
 
 ---
@@ -78,8 +87,8 @@ docker-compose up --build
 
 ## 🚀 Live Demo & Links
 
-- **Live Application (Frontend):** View Live App: "https://wind-energy-portal.vercel.app/"
-- **Backend API:** View Backend API: "https://wind-energy-portal.onrender.com"
+- **Live Application (Frontend):** View Live App:"https://wind-energy-portal.vercel.app/"
+- **Backend API:** View Backend API:"https://wind-energy-portal.onrender.com"
 
 ## ✨ Author & Submission Notes
 Built with clean, modular architecture, adhering to senior-level engineering standards and best practices for reliability and code maintainability.
