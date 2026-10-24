@@ -9,7 +9,7 @@ export default function App() {
     const [metrics, setMetrics] = useState({ meanAbsoluteError: 0, rootMeanSquareError: 0, forecastBias: 0 });
     const [loading, setLoading] = useState(true);
 
-    const API_BASE_URL = "http://localhost:8000";
+    const API_BASE_URL = "https://wind-energy-portal.onrender.com";
 
     useEffect(() => {
         fetchData();
