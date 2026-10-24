@@ -76,5 +76,10 @@ docker-compose up --build
 
 ---
 
+## 🚀 Live Demo & Links
+
+- **Live Application (Frontend):** View Live App: "https://wind-energy-portal.vercel.app/"
+- **Backend API:** View Backend API: "https://wind-energy-portal.onrender.com"
+
 ## ✨ Author & Submission Notes
 Built with clean, modular architecture, adhering to senior-level engineering standards and best practices for reliability and code maintainability.
